@@ -1,7 +1,0 @@
-.root{
-    --primary:#000;
-}
-body{
-    color:red;
-    border: var(--primary);
-}
