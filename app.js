@@ -53,11 +53,24 @@ function getAllDateFormat(date){
    
     return[ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd];
 }
+
+function checkPallindromeForAllDateFormats(date){
+    var pallindromeList = getAllDateFormat(date);
+    var isPallindrome = false;
+    for(var i = 0 ; i<pallindromeList.length ; i++){
+        if (isPalindrome(pallindromeList[i])){
+            isPallindrome=true;
+            break;
+        }
+        
+    }
+    return isPallindrome ; 
+}
 var date = {
     day:28,
     month:6,
     year:2001
 };
-console.log(getAllDateFormat(date));
+console.log(checkPallindromeForAllDateFormats(date));
 
 //
